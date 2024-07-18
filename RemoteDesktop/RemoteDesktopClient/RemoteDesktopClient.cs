@@ -155,10 +155,24 @@ namespace reomtedesktopclient
 
         private void SendMessage(string message)
         {
-            byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-            NetworkStream stream = client.GetStream();
-            stream.Write(BitConverter.GetBytes(messageBytes.Length), 0, 4);
-            stream.Write(messageBytes, 0, messageBytes.Length);
+            try
+            {
+                byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+                NetworkStream stream = client.GetStream();
+                int messageLength = messageBytes.Length;
+
+                byte[] lengthBytes = BitConverter.GetBytes(messageLength);
+                stream.Write(lengthBytes, 0, 4); // Send the length of the message
+
+                stream.Write(messageBytes, 0, messageLength); // Send the message itself
+            }
+            catch (Exception ex)
+            {
+                Invoke((MethodInvoker)delegate
+                {
+                    MessageBox.Show($"Exception in SendMessage: {ex.Message}");
+                });
+            }
         }
     }
 }

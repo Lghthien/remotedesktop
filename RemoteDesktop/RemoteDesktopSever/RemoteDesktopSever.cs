@@ -82,7 +82,13 @@ namespace remotedesktopsever
                     try
                     {
                         byte[] lengthBuffer = new byte[4];
-                        stream.Read(lengthBuffer, 0, 4);
+                        int bytesRead = stream.Read(lengthBuffer, 0, 4);
+
+                        if (bytesRead < 4)
+                        {
+                            throw new InvalidOperationException("Invalid length buffer read.");
+                        }
+
                         int length = BitConverter.ToInt32(lengthBuffer, 0);
 
                         // Validate the length to avoid overflow
@@ -92,7 +98,17 @@ namespace remotedesktopsever
                         }
 
                         byte[] buffer = new byte[length];
-                        stream.Read(buffer, 0, length);
+                        int totalBytesRead = 0;
+                        while (totalBytesRead < length)
+                        {
+                            int bytesRemaining = length - totalBytesRead;
+                            int bytesReadNow = stream.Read(buffer, totalBytesRead, bytesRemaining);
+                            if (bytesReadNow <= 0)
+                            {
+                                throw new InvalidOperationException("End of stream reached unexpectedly.");
+                            }
+                            totalBytesRead += bytesReadNow;
+                        }
 
                         string command = Encoding.UTF8.GetString(buffer);
                         ExecuteCommand(command);
