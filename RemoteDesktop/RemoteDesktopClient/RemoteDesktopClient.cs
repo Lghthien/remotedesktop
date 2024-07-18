@@ -70,7 +70,11 @@ namespace reomtedesktopclient
                         }
 
                         byte[] buffer = new byte[length];
-                        stream.Read(buffer, 0, length);
+                        int bytesRead = 0;
+                        while (bytesRead < length)
+                        {
+                            bytesRead += stream.Read(buffer, bytesRead, length - bytesRead);
+                        }
 
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {

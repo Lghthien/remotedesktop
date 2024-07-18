@@ -156,8 +156,14 @@ namespace remotedesktopsever
                     {
                         screenshot.Save(ms, ImageFormat.Jpeg);
                         byte[] buffer = ms.ToArray();
-                        stream.Write(BitConverter.GetBytes(buffer.Length), 0, 4);
-                        stream.Write(buffer, 0, buffer.Length);
+                        int length = buffer.Length;
+
+                        // Send the length of the buffer first
+                        byte[] lengthBuffer = BitConverter.GetBytes(length);
+                        stream.Write(lengthBuffer, 0, 4);
+
+                        // Then send the actual image data
+                        stream.Write(buffer, 0, length);
                     }
                     Thread.Sleep(100); // Reduce CPU load
                 }
