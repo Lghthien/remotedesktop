@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteDesktopSever", "RemoteDesktopSever.csproj", "{22D90DB9-C9F1-4348-85C3-6925908A29BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteDesktopClient", "..\RemoteDesktopClient\RemoteDesktopClient.csproj", "{91AC4BA6-0D12-4565-983A-4595D2C4230F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22D90DB9-C9F1-4348-85C3-6925908A29BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22D90DB9-C9F1-4348-85C3-6925908A29BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22D90DB9-C9F1-4348-85C3-6925908A29BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22D90DB9-C9F1-4348-85C3-6925908A29BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91AC4BA6-0D12-4565-983A-4595D2C4230F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91AC4BA6-0D12-4565-983A-4595D2C4230F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91AC4BA6-0D12-4565-983A-4595D2C4230F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91AC4BA6-0D12-4565-983A-4595D2C4230F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D09D560C-DB6B-4592-9C63-44041B0E92B1}
+	EndGlobalSection
+EndGlobal

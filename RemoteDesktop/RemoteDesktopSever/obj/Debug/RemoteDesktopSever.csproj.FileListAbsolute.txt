@@ -1,0 +1,20 @@
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe.config
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.pdb
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.AssemblyReference.cache
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.Properties.Resources.resources
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.RemoteDesktopSever.resources
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.GenerateResource.cache
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.CoreCompileInputs.cache
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.exe
+I:\Lập Trình Mạng\Thực hành\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.pdb
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe.config
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.AssemblyReference.cache
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.Properties.Resources.resources
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.RemoteDesktopSever.resources
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.GenerateResource.cache
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.CoreCompileInputs.cache
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.exe
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.pdb
+I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.pdb
