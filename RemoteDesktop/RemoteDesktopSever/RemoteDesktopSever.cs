@@ -16,12 +16,15 @@ namespace remotedesktopsever
     {
         private TcpListener listener;
         private Thread serverThread;
-        private string pin = "1234"; // Default PIN
+        private string pin;
         private List<TcpClient> clients = new List<TcpClient>();
 
         public RemoteDesktopSever()
         {
             InitializeComponent();
+            Random random = new Random();
+            pin = random.Next(10000).ToString();
+            pinLabel.Text = pin;
         }
 
         private void startButton_Click(object sender, EventArgs e)

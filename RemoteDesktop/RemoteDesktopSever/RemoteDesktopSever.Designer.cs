@@ -30,11 +30,13 @@
         {
             this.startButton = new System.Windows.Forms.Button();
             this.statusLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pinLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(66, 12);
+            this.startButton.Location = new System.Drawing.Point(63, 49);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(140, 35);
             this.startButton.TabIndex = 0;
@@ -45,20 +47,39 @@
             // statusLabel
             // 
             this.statusLabel.AutoSize = true;
-            this.statusLabel.Location = new System.Drawing.Point(73, 63);
+            this.statusLabel.Location = new System.Drawing.Point(72, 103);
             this.statusLabel.Name = "statusLabel";
             this.statusLabel.Size = new System.Drawing.Size(116, 16);
             this.statusLabel.TabIndex = 1;
             this.statusLabel.Text = "Server is stopped.";
             // 
-            // RemoteDesktopsever
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 16);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "PIN";
+            // 
+            // pinLabel
+            // 
+            this.pinLabel.AutoSize = true;
+            this.pinLabel.Location = new System.Drawing.Point(110, 9);
+            this.pinLabel.Name = "pinLabel";
+            this.pinLabel.Size = new System.Drawing.Size(0, 16);
+            this.pinLabel.TabIndex = 3;
+            // 
+            // RemoteDesktopSever
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(269, 128);
+            this.Controls.Add(this.pinLabel);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.statusLabel);
             this.Controls.Add(this.startButton);
-            this.Name = "RemoteDesktopsever";
+            this.Name = "RemoteDesktopSever";
             this.Text = "Sever";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -69,6 +90,8 @@
 
         private System.Windows.Forms.Button startButton;
         private System.Windows.Forms.Label statusLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label pinLabel;
     }
 }
 

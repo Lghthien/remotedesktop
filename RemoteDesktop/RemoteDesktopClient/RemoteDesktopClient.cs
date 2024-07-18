@@ -17,7 +17,7 @@ namespace reomtedesktopclient
         public RemoteDesktopClient()
         {
             InitializeComponent();
-            //pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch image to fit PictureBox
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch image to fit PictureBox
             this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Register Resize event
         }
 
