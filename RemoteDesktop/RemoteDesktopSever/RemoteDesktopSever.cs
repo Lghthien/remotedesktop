@@ -16,7 +16,7 @@ namespace remotedesktopsever
     {
         private TcpListener listener;
         private Thread serverThread;
-        private string pin = "1234"; // Mã PIN mặc định
+        private string pin = "1234"; // Default PIN
         private List<TcpClient> clients = new List<TcpClient>();
 
         public RemoteDesktopSever()
@@ -71,7 +71,7 @@ namespace remotedesktopsever
 
             if (receivedPin == pin)
             {
-                byte[] responseBuffer = BitConverter.GetBytes(1); // Mã PIN đúng
+                byte[] responseBuffer = BitConverter.GetBytes(1); // Correct PIN
                 stream.Write(responseBuffer, 0, responseBuffer.Length);
 
                 Thread captureThread = new Thread(() => CaptureScreenLoop(client));
@@ -84,6 +84,13 @@ namespace remotedesktopsever
                         byte[] lengthBuffer = new byte[4];
                         stream.Read(lengthBuffer, 0, 4);
                         int length = BitConverter.ToInt32(lengthBuffer, 0);
+
+                        // Validate the length to avoid overflow
+                        if (length <= 0 || length > 10_000_000)
+                        {
+                            throw new InvalidOperationException("Invalid data length received.");
+                        }
+
                         byte[] buffer = new byte[length];
                         stream.Read(buffer, 0, length);
 
@@ -94,11 +101,27 @@ namespace remotedesktopsever
                     {
                         break;
                     }
+                    catch (InvalidOperationException ex)
+                    {
+                        Invoke((MethodInvoker)delegate
+                        {
+                            MessageBox.Show($"Operation Exception: {ex.Message}");
+                        });
+                        break;
+                    }
+                    catch (Exception ex)
+                    {
+                        Invoke((MethodInvoker)delegate
+                        {
+                            MessageBox.Show($"Exception: {ex.Message}");
+                        });
+                        break;
+                    }
                 }
             }
             else
             {
-                byte[] responseBuffer = BitConverter.GetBytes(0); // Mã PIN sai
+                byte[] responseBuffer = BitConverter.GetBytes(0); // Incorrect PIN
                 stream.Write(responseBuffer, 0, responseBuffer.Length);
                 client.Close();
             }
@@ -120,10 +143,18 @@ namespace remotedesktopsever
                         stream.Write(BitConverter.GetBytes(buffer.Length), 0, 4);
                         stream.Write(buffer, 0, buffer.Length);
                     }
-                    Thread.Sleep(100); // Giảm tải CPU
+                    Thread.Sleep(100); // Reduce CPU load
                 }
                 catch (IOException)
                 {
+                    break;
+                }
+                catch (Exception ex)
+                {
+                    Invoke((MethodInvoker)delegate
+                    {
+                        MessageBox.Show($"Exception in CaptureScreenLoop: {ex.Message}");
+                    });
                     break;
                 }
             }

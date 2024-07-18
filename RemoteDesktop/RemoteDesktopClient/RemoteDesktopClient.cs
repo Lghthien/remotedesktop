@@ -17,8 +17,8 @@ namespace reomtedesktopclient
         public RemoteDesktopClient()
         {
             InitializeComponent();
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch the image to fill the PictureBox
-            this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Register the Resize event
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch image to fit PictureBox
+            this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Register Resize event
         }
 
         private void connectButton_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace reomtedesktopclient
 
                 if (response == 1)
                 {
+                    connectButton.Visible = false;
+                    PIN.Visible = false;
+                    IP.Visible = false;
+                    pinTextBox.Visible = false;
+                    ipTextBox.Visible = false;
                     Invoke((MethodInvoker)delegate
                     {
                         MessageBox.Show("Connected to server!");
@@ -57,21 +62,30 @@ namespace reomtedesktopclient
                         byte[] lengthBuffer = new byte[4];
                         stream.Read(lengthBuffer, 0, 4);
                         int length = BitConverter.ToInt32(lengthBuffer, 0);
+
+                        // Validate the length to avoid overflow
+                        if (length <= 0 || length > 10_000_000)
+                        {
+                            throw new InvalidOperationException("Invalid data length received.");
+                        }
+
                         byte[] buffer = new byte[length];
                         stream.Read(buffer, 0, length);
-                        connectButton.Visible = false;
-                        PIN.Visible = false;
-                        pinTextBox.Visible = false;
-                        ipTextBox.Visible = false;
-                        IP.Visible = false;
+
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {
-                            screenshot = new Bitmap(ms);
-                            pictureBox.Invoke(new Action(() =>
+                            try
                             {
-                                pictureBox.Image = screenshot;
-                                AdjustPictureBoxSize(); // Adjust PictureBox size to fit the Form
-                            })); // Update the PictureBox image
+                                screenshot = new Bitmap(ms);
+                                pictureBox.Invoke(new Action(() => pictureBox.Image = screenshot)); // Update PictureBox
+                            }
+                            catch (ArgumentException ex)
+                            {
+                                Invoke((MethodInvoker)delegate
+                                {
+                                    MessageBox.Show($"Invalid image data: {ex.Message}");
+                                });
+                            }
                         }
                     }
                 }
@@ -93,19 +107,15 @@ namespace reomtedesktopclient
             }
         }
 
-        private void AdjustPictureBoxSize()
-        {
-            if (screenshot != null)
-            {
-                pictureBox.Size = this.ClientSize; // Set the PictureBox size to match the Form client area
-                pictureBox.Left = 0;
-                pictureBox.Top = 0;
-            }
-        }
-
         private void RemoteDesktopClient_Resize(object sender, EventArgs e)
         {
-            AdjustPictureBoxSize(); // Adjust PictureBox size when the Form is resized
+            AdjustPictureBoxSize();
+        }
+
+        private void AdjustPictureBoxSize()
+        {
+            pictureBox.Width = this.ClientSize.Width;
+            pictureBox.Height = this.ClientSize.Height;
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
