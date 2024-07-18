@@ -41,7 +41,7 @@
             // 
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1498, 742);
+            this.pictureBox.Size = new System.Drawing.Size(1656, 742);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1513, 747);
+            this.ClientSize = new System.Drawing.Size(1735, 908);
             this.Controls.Add(this.IP);
             this.Controls.Add(this.PIN);
             this.Controls.Add(this.ipTextBox);

@@ -17,7 +17,7 @@ namespace reomtedesktopclient
         public RemoteDesktopClient()
         {
             InitializeComponent();
-            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch image to fit PictureBox
+            //pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch image to fit PictureBox
             this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Register Resize event
         }
 
@@ -70,18 +70,30 @@ namespace reomtedesktopclient
                         }
 
                         byte[] buffer = new byte[length];
-                        int bytesRead = 0;
-                        while (bytesRead < length)
+                        int totalBytesRead = 0;
+                        while (totalBytesRead < length)
                         {
-                            bytesRead += stream.Read(buffer, bytesRead, length - bytesRead);
+                            int bytesRead = stream.Read(buffer, totalBytesRead, length - totalBytesRead);
+                            if (bytesRead == 0)
+                            {
+                                throw new IOException("Connection closed unexpectedly.");
+                            }
+                            totalBytesRead += bytesRead;
                         }
 
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {
                             try
                             {
-                                screenshot = new Bitmap(ms);
-                                pictureBox.Invoke(new Action(() => pictureBox.Image = screenshot)); // Update PictureBox
+                                // Assign the new Bitmap to PictureBox.Image, disposing the old one
+                                pictureBox.Invoke((MethodInvoker)(() =>
+                                {
+                                    if (pictureBox.Image != null)
+                                    {
+                                        pictureBox.Image.Dispose(); // Dispose the old image to release resources
+                                    }
+                                    pictureBox.Image = Image.FromStream(ms); // Set PictureBox image from memory stream
+                                }));
                             }
                             catch (ArgumentException ex)
                             {

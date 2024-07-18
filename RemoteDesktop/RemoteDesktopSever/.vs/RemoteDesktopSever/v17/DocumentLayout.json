@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|f:\\remotedesktop\\remotedesktop\\remotedesktopsever\\remotedesktopsever.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|solutionrelative:remotedesktopsever.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|f:\\remotedesktop\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|solutionrelative:remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|f:\\remotedesktop\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|f:\\remotedesktop\\remotedesktop\\remotedesktopsever\\remotedesktopsever.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|solutionrelative:remotedesktopsever.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|f:\\remotedesktop\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
@@ -28,7 +28,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,13 +40,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "RemoteDesktopSever.Designer.cs",
               "DocumentMoniker": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.Designer.cs",
               "RelativeDocumentMoniker": "RemoteDesktopSever.Designer.cs",
               "ToolTip": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.Designer.cs",
               "RelativeToolTip": "RemoteDesktopSever.Designer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-18T09:39:49.453Z",
               "EditorCaption": ""
@@ -59,21 +59,23 @@
               "RelativeDocumentMoniker": "RemoteDesktopSever.cs",
               "ToolTip": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
               "RelativeToolTip": "RemoteDesktopSever.cs",
-              "ViewState": "AQIAAJYAAAAAAAAAAAAwwLYAAAAJAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAwJEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T06:36:15.582Z"
+              "WhenOpened": "2024-07-18T06:36:15.582Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "RemoteDesktopClient.cs",
               "DocumentMoniker": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
               "RelativeDocumentMoniker": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
               "ToolTip": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
               "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAwwG8AAAAJAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAIwBMAAABnAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T08:33:15.762Z"
+              "WhenOpened": "2024-07-18T08:33:15.762Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -84,7 +86,8 @@
               "ToolTip": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
               "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T08:33:13.187Z"
+              "WhenOpened": "2024-07-18T08:33:13.187Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
@@ -95,7 +98,8 @@
               "ToolTip": "F:\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs [Design]",
               "RelativeToolTip": "RemoteDesktopSever.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:32:24.926Z"
+              "WhenOpened": "2024-07-18T05:32:24.926Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }
