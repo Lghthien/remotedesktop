@@ -39,6 +39,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.BackColor = System.Drawing.Color.SeaShell;
             this.pictureBox.Location = new System.Drawing.Point(3, 3);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(1656, 742);
@@ -49,46 +50,53 @@
             // 
             // connectButton
             // 
-            this.connectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectButton.BackColor = System.Drawing.Color.Teal;
+            this.connectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.connectButton.Location = new System.Drawing.Point(21, 12);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(205, 65);
             this.connectButton.TabIndex = 1;
             this.connectButton.Text = "Conncet to sever";
-            this.connectButton.UseVisualStyleBackColor = true;
+            this.connectButton.UseVisualStyleBackColor = false;
             this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
             // pinTextBox
             // 
+            this.pinTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pinTextBox.Location = new System.Drawing.Point(332, 13);
+            this.pinTextBox.Multiline = true;
             this.pinTextBox.Name = "pinTextBox";
-            this.pinTextBox.Size = new System.Drawing.Size(244, 22);
+            this.pinTextBox.Size = new System.Drawing.Size(244, 28);
             this.pinTextBox.TabIndex = 3;
             // 
             // ipTextBox
             // 
+            this.ipTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ipTextBox.Location = new System.Drawing.Point(332, 59);
+            this.ipTextBox.Multiline = true;
             this.ipTextBox.Name = "ipTextBox";
-            this.ipTextBox.Size = new System.Drawing.Size(244, 22);
+            this.ipTextBox.Size = new System.Drawing.Size(244, 28);
             this.ipTextBox.TabIndex = 4;
             // 
             // PIN
             // 
             this.PIN.AutoSize = true;
+            this.PIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PIN.Location = new System.Drawing.Point(255, 17);
             this.PIN.Name = "PIN";
-            this.PIN.Size = new System.Drawing.Size(29, 16);
+            this.PIN.Size = new System.Drawing.Size(45, 20);
             this.PIN.TabIndex = 5;
-            this.PIN.Text = "PIN";
+            this.PIN.Text = "PIN:";
             // 
             // IP
             // 
             this.IP.AutoSize = true;
+            this.IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IP.Location = new System.Drawing.Point(263, 61);
             this.IP.Name = "IP";
-            this.IP.Size = new System.Drawing.Size(19, 16);
+            this.IP.Size = new System.Drawing.Size(32, 20);
             this.IP.TabIndex = 6;
-            this.IP.Text = "IP";
+            this.IP.Text = "IP:";
             // 
             // RemoteDesktopClient
             // 

@@ -23,9 +23,10 @@ namespace remotedesktopsever
         {
             InitializeComponent();
             Random random = new Random();
-            pin = random.Next(10000).ToString();
+            pin = random.Next(10000).ToString("D4");
             pinLabel.Text = pin;
         }
+        
 
         private void startButton_Click(object sender, EventArgs e)
         {
@@ -241,6 +242,11 @@ namespace remotedesktopsever
             byte vk = (byte)key;
             keybd_event(vk, 0, KEYEVENTF_KEYDOWN, 0);
             keybd_event(vk, 0, KEYEVENTF_KEYUP, 0);
+        }
+
+        private void RemoteDesktopSever_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
