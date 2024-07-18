@@ -27,3 +27,13 @@ E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesk
 E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.csproj.CoreCompileInputs.cache
 E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.exe
 E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.pdb
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\bin\Debug\RemoteDesktopClient.exe.config
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\bin\Debug\RemoteDesktopClient.exe
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\bin\Debug\RemoteDesktopClient.pdb
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.csproj.AssemblyReference.cache
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.Properties.Resources.resources
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\reomtedesktopclient.RemoteDesktopClient.resources
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.csproj.GenerateResource.cache
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.csproj.CoreCompileInputs.cache
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.exe
+F:\remotedesktop\RemoteDesktop\RemoteDesktopClient\obj\Debug\RemoteDesktopClient.pdb

@@ -17,7 +17,7 @@ namespace reomtedesktopclient
         public RemoteDesktopClient()
         {
             InitializeComponent();
-            pictureBox.SizeMode = PictureBoxSizeMode.Zoom; // Đảm bảo hình ảnh giữ tỷ lệ
+            pictureBox.SizeMode = PictureBoxSizeMode.AutoSize; // Đảm bảo hình ảnh giữ tỷ lệ
             this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Đăng ký sự kiện Resize
         }
 
@@ -62,20 +62,7 @@ namespace reomtedesktopclient
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {
                             screenshot = new Bitmap(ms);
-                            /* pictureBox.Invoke((MethodInvoker)delegate
-                             {
-                                 pictureBox.Image = screenshot;
-
-                                 // Điều chỉnh kích thước của PictureBox theo kích thước của màn hình máy chủ
-                                 AdjustPictureBoxSize();
-                             });*/
                             pictureBox.Invoke(new Action(() => pictureBox.Image = screenshot)); // Cập nhật hình ảnh trong PictureBox
-
-                            // Điều chỉnh kích thước của PictureBox theo kích thước của màn hình máy chủ
-                            pictureBox.Invoke(new Action(() =>
-                            {
-                                AdjustPictureBoxSize(); // Điều chỉnh kích thước PictureBox
-                            }));
                         }
                     }
                 }
@@ -99,66 +86,55 @@ namespace reomtedesktopclient
 
         private void AdjustPictureBoxSize()
         {
-            if (screenshot != null)
-            {
-                float aspectRatio = (float)screenshot.Width / screenshot.Height;
-                int formWidth = this.ClientSize.Width;
-                int formHeight = this.ClientSize.Height;
-
-                if (formWidth / (float)formHeight > aspectRatio)
-                {
-                    pictureBox.Width = (int)(formHeight * aspectRatio);
-                    pictureBox.Height = formHeight;
-                }
-                else
-                {
-                    pictureBox.Width = formWidth;
-                    pictureBox.Height = (int)(formWidth / aspectRatio);
-                }
-                pictureBox.Left = (this.ClientSize.Width - pictureBox.Width) / 2;
-                pictureBox.Top = (this.ClientSize.Height - pictureBox.Height) / 2;
-            }
+            // Hàm này có thể bỏ vì sử dụng PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
         }
 
         private void RemoteDesktopClient_Resize(object sender, EventArgs e)
         {
-            AdjustPictureBoxSize();
+            // Không cần điều chỉnh kích thước trong sự kiện Resize vì PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)
         {
-            if (client != null && client.Connected)
-            {
-                NetworkStream stream = client.GetStream();
-                string message = $"MOUSE_MOVE|{e.X}|{e.Y}";
-                byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-                stream.Write(BitConverter.GetBytes(messageBytes.Length), 0, 4);
-                stream.Write(messageBytes, 0, messageBytes.Length);
-            }
+            SendMouseEvent("MOUSE_MOVE", e.X, e.Y);
         }
 
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            if (client != null && client.Connected)
-            {
-                NetworkStream stream = client.GetStream();
-                string message = $"MOUSE_CLICK|{e.X}|{e.Y}";
-                byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-                stream.Write(BitConverter.GetBytes(messageBytes.Length), 0, 4);
-                stream.Write(messageBytes, 0, messageBytes.Length);
-            }
+            SendMouseEvent("MOUSE_CLICK", e.X, e.Y);
         }
 
         private void pictureBox_KeyDown(object sender, KeyEventArgs e)
         {
+            SendKeyEvent("KEY_PRESS", e.KeyCode);
+        }
+
+        private void SendMouseEvent(string type, int x, int y)
+        {
             if (client != null && client.Connected)
             {
                 NetworkStream stream = client.GetStream();
-                string message = $"KEY_PRESS|{e.KeyCode}";
-                byte[] messageBytes = Encoding.UTF8.GetBytes(message);
-                stream.Write(BitConverter.GetBytes(messageBytes.Length), 0, 4);
-                stream.Write(messageBytes, 0, messageBytes.Length);
+                string message = $"{type}|{x}|{y}";
+                SendMessage(message);
             }
+        }
+
+        private void SendKeyEvent(string type, Keys keyCode)
+        {
+            if (client != null && client.Connected)
+            {
+                NetworkStream stream = client.GetStream();
+                string message = $"{type}|{keyCode}";
+                SendMessage(message);
+            }
+        }
+
+        private void SendMessage(string message)
+        {
+            byte[] messageBytes = Encoding.UTF8.GetBytes(message);
+            NetworkStream stream = client.GetStream();
+            stream.Write(BitConverter.GetBytes(messageBytes.Length), 0, 4);
+            stream.Write(messageBytes, 0, messageBytes.Length);
         }
     }
 }

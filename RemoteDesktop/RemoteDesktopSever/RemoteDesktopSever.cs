@@ -113,11 +113,13 @@ namespace remotedesktopsever
                 try
                 {
                     Bitmap screenshot = CaptureScreen();
-                    MemoryStream ms = new MemoryStream();
-                    screenshot.Save(ms, ImageFormat.Jpeg);
-                    byte[] buffer = ms.ToArray();
-                    stream.Write(BitConverter.GetBytes(buffer.Length), 0, 4);
-                    stream.Write(buffer, 0, buffer.Length);
+                    using (MemoryStream ms = new MemoryStream())
+                    {
+                        screenshot.Save(ms, ImageFormat.Jpeg);
+                        byte[] buffer = ms.ToArray();
+                        stream.Write(BitConverter.GetBytes(buffer.Length), 0, 4);
+                        stream.Write(buffer, 0, buffer.Length);
+                    }
                     Thread.Sleep(100); // Giảm tải CPU
                 }
                 catch (IOException)
