@@ -17,8 +17,8 @@ namespace reomtedesktopclient
         public RemoteDesktopClient()
         {
             InitializeComponent();
-            pictureBox.SizeMode = PictureBoxSizeMode.AutoSize; // Đảm bảo hình ảnh giữ tỷ lệ
-            this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Đăng ký sự kiện Resize
+            pictureBox.SizeMode = PictureBoxSizeMode.StretchImage; // Stretch the image to fill the PictureBox
+            this.Resize += new EventHandler(RemoteDesktopClient_Resize); // Register the Resize event
         }
 
         private void connectButton_Click(object sender, EventArgs e)
@@ -59,10 +59,19 @@ namespace reomtedesktopclient
                         int length = BitConverter.ToInt32(lengthBuffer, 0);
                         byte[] buffer = new byte[length];
                         stream.Read(buffer, 0, length);
+                        connectButton.Visible = false;
+                        PIN.Visible = false;
+                        pinTextBox.Visible = false;
+                        ipTextBox.Visible = false;
+                        IP.Visible = false;
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {
                             screenshot = new Bitmap(ms);
-                            pictureBox.Invoke(new Action(() => pictureBox.Image = screenshot)); // Cập nhật hình ảnh trong PictureBox
+                            pictureBox.Invoke(new Action(() =>
+                            {
+                                pictureBox.Image = screenshot;
+                                AdjustPictureBoxSize(); // Adjust PictureBox size to fit the Form
+                            })); // Update the PictureBox image
                         }
                     }
                 }
@@ -86,12 +95,17 @@ namespace reomtedesktopclient
 
         private void AdjustPictureBoxSize()
         {
-            // Hàm này có thể bỏ vì sử dụng PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            if (screenshot != null)
+            {
+                pictureBox.Size = this.ClientSize; // Set the PictureBox size to match the Form client area
+                pictureBox.Left = 0;
+                pictureBox.Top = 0;
+            }
         }
 
         private void RemoteDesktopClient_Resize(object sender, EventArgs e)
         {
-            // Không cần điều chỉnh kích thước trong sự kiện Resize vì PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            AdjustPictureBoxSize(); // Adjust PictureBox size when the Form is resized
         }
 
         private void pictureBox_MouseMove(object sender, MouseEventArgs e)

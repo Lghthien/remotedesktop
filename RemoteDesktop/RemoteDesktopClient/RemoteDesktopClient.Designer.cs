@@ -41,7 +41,7 @@
             // 
             this.pictureBox.Location = new System.Drawing.Point(12, 87);
             this.pictureBox.Name = "pictureBox";
-            this.pictureBox.Size = new System.Drawing.Size(1102, 462);
+            this.pictureBox.Size = new System.Drawing.Size(1434, 622);
             this.pictureBox.TabIndex = 0;
             this.pictureBox.TabStop = false;
             this.pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox_MouseClick);
@@ -49,9 +49,10 @@
             // 
             // connectButton
             // 
-            this.connectButton.Location = new System.Drawing.Point(29, 12);
+            this.connectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.connectButton.Location = new System.Drawing.Point(21, 12);
             this.connectButton.Name = "connectButton";
-            this.connectButton.Size = new System.Drawing.Size(142, 23);
+            this.connectButton.Size = new System.Drawing.Size(205, 65);
             this.connectButton.TabIndex = 1;
             this.connectButton.Text = "Conncet to sever";
             this.connectButton.UseVisualStyleBackColor = true;
@@ -61,14 +62,14 @@
             // 
             this.pinTextBox.Location = new System.Drawing.Point(332, 13);
             this.pinTextBox.Name = "pinTextBox";
-            this.pinTextBox.Size = new System.Drawing.Size(100, 22);
+            this.pinTextBox.Size = new System.Drawing.Size(244, 22);
             this.pinTextBox.TabIndex = 3;
             // 
             // ipTextBox
             // 
             this.ipTextBox.Location = new System.Drawing.Point(332, 59);
             this.ipTextBox.Name = "ipTextBox";
-            this.ipTextBox.Size = new System.Drawing.Size(100, 22);
+            this.ipTextBox.Size = new System.Drawing.Size(244, 22);
             this.ipTextBox.TabIndex = 4;
             // 
             // PIN
@@ -93,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 561);
+            this.ClientSize = new System.Drawing.Size(1458, 721);
             this.Controls.Add(this.IP);
             this.Controls.Add(this.PIN);
             this.Controls.Add(this.ipTextBox);
