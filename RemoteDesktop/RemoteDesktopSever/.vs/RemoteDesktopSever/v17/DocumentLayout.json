@@ -1,22 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopSever\\",
+  "WorkspaceRootPath": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|i:\\l\u1EADp tr\u00ECnh m\u1EA1ng\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|e:\\filezalo\\remotedesktop\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|i:\\l\u1EADp tr\u00ECnh m\u1EA1ng\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|e:\\filezalo\\remotedesktop\\remotedesktop\\remotedesktopclient\\remotedesktopclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AC4BA6-0D12-4565-983A-4595D2C4230F}|..\\RemoteDesktopClient\\RemoteDesktopClient.csproj|i:\\l\u1EADp tr\u00ECnh m\u1EA1ng\\remotedesktop\\remotedesktopclient\\remotedesktopclient.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|i:\\l\u1EADp tr\u00ECnh m\u1EA1ng\\remotedesktop\\remotedesktopsever\\remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|e:\\filezalo\\remotedesktop\\remotedesktop\\remotedesktopsever\\remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|solutionrelative:remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|i:\\l\u1EADp tr\u00ECnh m\u1EA1ng\\remotedesktop\\remotedesktopsever\\remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{8A489FBF-1316-4C41-828B-382B373FA6D1}|RemoteDesktopSever.csproj|solutionrelative:remotedesktopsever.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -27,77 +24,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:254354193:0:{71f361cc-493f-47c0-923f-f2570b6f8618}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "RemoteDesktopSever.cs",
-              "DocumentMoniker": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
-              "RelativeDocumentMoniker": "RemoteDesktopSever.cs",
-              "ToolTip": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
-              "RelativeToolTip": "RemoteDesktopSever.cs",
-              "ViewState": "AQIAAJEAAAAAAAAAAAAwwLwAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "RemoteDesktopClient.cs [Design]",
+              "DocumentMoniker": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
+              "RelativeDocumentMoniker": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
+              "ToolTip": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
+              "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:38:27.975Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RemoteDesktopSever.cs [Design]",
-              "DocumentMoniker": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
-              "RelativeDocumentMoniker": "RemoteDesktopSever.cs",
-              "ToolTip": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs [Design]",
-              "RelativeToolTip": "RemoteDesktopSever.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:32:24.926Z",
+              "WhenOpened": "2024-07-18T07:36:00.364Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "RemoteDesktopClient.cs",
-              "DocumentMoniker": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
+              "DocumentMoniker": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
               "RelativeDocumentMoniker": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
-              "ToolTip": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
+              "ToolTip": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
               "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
-              "ViewState": "AQIAAH0AAAAAAAAAAAAcwJ0AAAAAAAAA",
+              "ViewState": "AQIAADUAAAAAAAAAAAAgwEQAAABtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:29:00.358Z",
+              "WhenOpened": "2024-07-18T06:36:49.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RemoteDesktopClient.Designer.cs",
-              "DocumentMoniker": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.Designer.cs",
-              "RelativeDocumentMoniker": "..\\RemoteDesktopClient\\RemoteDesktopClient.Designer.cs",
-              "ToolTip": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.Designer.cs",
-              "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.Designer.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAIAwwFsAAAAAAAAA",
+              "Title": "RemoteDesktopSever.cs",
+              "DocumentMoniker": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
+              "RelativeDocumentMoniker": "RemoteDesktopSever.cs",
+              "ToolTip": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
+              "RelativeToolTip": "RemoteDesktopSever.cs",
+              "ViewState": "AQIAAJgAAAAAAAAAAAAAABwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:28:51.427Z",
+              "WhenOpened": "2024-07-18T06:36:15.582Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RemoteDesktopClient.cs [Design]",
-              "DocumentMoniker": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs",
-              "RelativeDocumentMoniker": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs",
-              "ToolTip": "I:\\L\u1EADp Tr\u00ECnh M\u1EA1ng\\RemoteDesktop\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
-              "RelativeToolTip": "..\\RemoteDesktopClient\\RemoteDesktopClient.cs [Design]",
+              "DocumentIndex": 3,
+              "Title": "RemoteDesktopSever.cs [Design]",
+              "DocumentMoniker": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs",
+              "RelativeDocumentMoniker": "RemoteDesktopSever.cs",
+              "ToolTip": "E:\\FileZalo\\remotedesktop\\RemoteDesktop\\RemoteDesktopSever\\RemoteDesktopSever.cs [Design]",
+              "RelativeToolTip": "RemoteDesktopSever.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T05:28:38.81Z",
+              "WhenOpened": "2024-07-18T05:32:24.926Z",
               "EditorCaption": " [Design]"
             }
           ]

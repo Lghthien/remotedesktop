@@ -18,3 +18,13 @@ I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopS
 I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.exe
 I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.pdb
 I:\Lập Trình Mạng\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.pdb
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe.config
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.exe
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\bin\Debug\remotedesktopsever.pdb
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.AssemblyReference.cache
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.Properties.Resources.resources
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.RemoteDesktopSever.resources
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.GenerateResource.cache
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\RemoteDesktopSever.csproj.CoreCompileInputs.cache
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.exe
+E:\FileZalo\remotedesktop\RemoteDesktop\RemoteDesktopSever\obj\Debug\remotedesktopsever.pdb

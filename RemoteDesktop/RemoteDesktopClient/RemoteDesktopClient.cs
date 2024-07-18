@@ -62,13 +62,20 @@ namespace reomtedesktopclient
                         using (MemoryStream ms = new MemoryStream(buffer))
                         {
                             screenshot = new Bitmap(ms);
-                            pictureBox.Invoke((MethodInvoker)delegate
-                            {
-                                pictureBox.Image = screenshot;
+                            /* pictureBox.Invoke((MethodInvoker)delegate
+                             {
+                                 pictureBox.Image = screenshot;
 
-                                // Điều chỉnh kích thước của PictureBox theo kích thước của màn hình máy chủ
-                                AdjustPictureBoxSize();
-                            });
+                                 // Điều chỉnh kích thước của PictureBox theo kích thước của màn hình máy chủ
+                                 AdjustPictureBoxSize();
+                             });*/
+                            pictureBox.Invoke(new Action(() => pictureBox.Image = screenshot)); // Cập nhật hình ảnh trong PictureBox
+
+                            // Điều chỉnh kích thước của PictureBox theo kích thước của màn hình máy chủ
+                            pictureBox.Invoke(new Action(() =>
+                            {
+                                AdjustPictureBoxSize(); // Điều chỉnh kích thước PictureBox
+                            }));
                         }
                     }
                 }
